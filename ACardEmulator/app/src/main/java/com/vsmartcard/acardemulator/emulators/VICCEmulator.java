@@ -113,7 +113,7 @@ public class VICCEmulator implements Emulator {
     }
 
     private void vpcdConnect(String hostname, int port) throws IOException {
-        Log.d("", "Connecting to " + hostname + ":" + Integer.toString(port));
+        Log.d("", "Connecting to " + hostname + ":" + port);
         socket = new Socket(InetAddress.getByName(hostname), port);
         outputStream = socket.getOutputStream();
         inputStream = socket.getInputStream();

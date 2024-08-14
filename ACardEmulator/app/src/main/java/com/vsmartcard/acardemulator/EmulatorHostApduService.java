@@ -38,6 +38,7 @@ public class EmulatorHostApduService extends HostApduService {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        EmulatorSingleton.destroyEmulator();
     }
 
     @Override
