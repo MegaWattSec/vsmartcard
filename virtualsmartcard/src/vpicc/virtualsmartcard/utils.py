@@ -70,7 +70,7 @@ def hexdump(data, indent=0, short=False, linelen=16, offset=0):
         return " ".join(map("{0:0>2X}".format, data))
 
     def printable(data):
-        return "".join([e in _myprintable and e or "." for e in data])
+        return "".join([chr(e) in _myprintable and chr(e) or "." for e in data])
 
     if short:
         return "%s (%s)" % (hexable(data), printable(data))
