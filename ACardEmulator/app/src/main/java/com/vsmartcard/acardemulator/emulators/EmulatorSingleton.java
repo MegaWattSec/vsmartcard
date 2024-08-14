@@ -105,7 +105,7 @@ public class EmulatorSingleton {
     public static String[] getRegisteredAids(Context context) {
         List<String> aidList = new ArrayList<>();
         XmlResourceParser aidXmlParser = context.getResources().getXml(R.xml.aid_list);
-
+        Log.d("", "Getting AID list");
         try {
             while (aidXmlParser.getEventType() != XmlPullParser.END_DOCUMENT) {
                 if (aidXmlParser.getEventType() == XmlPullParser.START_TAG) {
