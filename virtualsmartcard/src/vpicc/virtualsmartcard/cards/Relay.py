@@ -76,7 +76,7 @@ class RelayOS(SmartcardOS):
         # In this case we must try to reconnect (and then get the ATR).
         try:
             atr = self.session.getATR()
-        except smartcard.Exceptions.CardConnectionException as e:
+        except:
             try:
                 # Try to reconnect to the card
                 self.session.close()
@@ -95,7 +95,7 @@ class RelayOS(SmartcardOS):
         # must try to reconnect (and power the card).
         try:
             self.session.getATR()
-        except smartcard.Exceptions.CardConnectionException as e:
+        except:
             try:
                 self.session = smartcard.Session(self.reader)
             except smartcard.Exceptions.CardConnectionException as e:
