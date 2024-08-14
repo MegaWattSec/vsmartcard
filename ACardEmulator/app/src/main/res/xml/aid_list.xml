@@ -2,7 +2,8 @@
 
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
     android:description="@string/app_name"
-    android:requireDeviceUnlock="false">
+    android:requireDeviceUnlock="false"
+    android:apduServiceBanner="@drawable/card_background">
 
     <aid-group android:description="@string/applet_openpgp" android:category="other">
         <aid-filter android:name="@string/aid_openpgp"/>
@@ -29,6 +30,24 @@
         <aid-filter android:name="@string/aid_gidsapplet"/>
         <aid-filter android:name="@string/aid_gidsapplet_truncated1"/>
         <aid-filter android:name="@string/aid_gidsapplet_truncated2"/>
+    </aid-group>
+
+    <aid-group android:description="@string/applet_payments" android:category="payment">
+        <!-- Following is a PPSE AID. You must always include this AID in order for payments to work-->
+        <aid-filter android:name="325041592E5359532E4444463031" />
+
+        <!-- Following AID list is specific to the application requirements.
+	       If your application supports the type of card that these AID represents,
+	       you must include those AID in your configuration file -->
+        <aid-filter android:name="@string/aid_visa"/>
+        <aid-filter android:name="@string/aid_visa_2"/>
+        <aid-filter android:name="@string/aid_visa_3"/>
+        <aid-filter android:name="@string/aid_visa_4"/>
+        <aid-filter android:name="@string/aid_mc"/>
+        <aid-filter android:name="@string/aid_mc_2"/>
+        <aid-filter android:name="@string/aid_discover"/>
+        <aid-filter android:name="@string/aid_discover_2"/>
+        <aid-filter android:name="@string/aid_amex"/>
     </aid-group>
 
 </host-apdu-service>

@@ -31,6 +31,22 @@
     <string name="applet_openpgp">Yubico\'s OpenPGP Applet</string>
     <string name="aid_oath">A000000527210101</string>
     <string name="applet_oath">Yubico\'s OATH Applet</string>
+    <string name="applet_visa">Visa payment card Applets</string>
+    <string name="aid_visa">A0000000031010</string>
+    <string name="aid_visa_2">A0000000032010</string>
+    <string name="aid_visa_3">A0000000033010</string>
+    <string name="aid_visa_4">a0000000038010</string>
+    <string name="applet_mastercard">Mastercard payment card Applets</string>
+    <string name="aid_mc">A0000000041010</string>
+    <string name="aid_mc_2">A0000000043060</string>
+    <string name="applet_amex">American Express payment card Applets</string>
+    <string name="aid_amex">A00000002501</string>
+    <string name="applet_discover">Discover payment card Applets</string>
+    <string name="aid_discover">A0000001523010</string>
+    <string name="aid_discover_2">A0000003241010</string>
+    <string name="applet_gpay">Google Pay card Applets</string>
+    <string name="aid_gpay">A000000476D0000111</string>
+    <string name="applet_payments">Payment Applets</string>
     <string name="startup_title">Tap To Emulate!</string>
     <string name="startup_message">The following smart card applets are supported:\n
         \n
@@ -39,6 +55,7 @@
         <b>PIV Applet</b> <small>(AID A00000030800001000)</small>\n
         <b>ISO Applet</b> <small>(AID F276A288BCFBA69D34F31001)</small>\n
         <b>GIDS Applet</b> <small>(AID A000000397425446590201)</small>\n
+        <b>Payment Applets</b>\n
         \n
         Place your device on a contact-less reader. When the reader issues a SELECT command for one of the application identifiers above, the emulator creates the appropriate applet. The emulated applet will then handle all subsequent APDUs.</string>
     <string name="action_settings">Settings</string>
